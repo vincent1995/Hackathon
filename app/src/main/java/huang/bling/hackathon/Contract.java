@@ -1,14 +1,14 @@
 package huang.bling.hackathon;
 
 public interface Contract {
-    interface Module{
-        public int addNubmer(int num);
-    }
     interface View{
-        public void showText(String s);
-        public String getValue();
+        public void showAnswer(String s);
+        public String getOldString();
+    }
+    interface Module{
+        public String calculate(String oldString,String buttonString);
     }
     interface Presenter{
-        public void clickButton();
+        public void clickButton(String buttonString);
     }
 }

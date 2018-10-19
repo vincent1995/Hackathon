@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: br.com.mauker.materialsearchview:materialsearchview-1.2.0">
+    <CLASSES>
+      <root url="file://$APPLICATION_HOME_DIR$/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.0.aar/538f201c0fadc9a8c0718b9abb68345b/res" />
+      <root url="jar://$APPLICATION_HOME_DIR$/.gradle/caches/transforms-1/files-1.1/materialsearchview-1.2.0.aar/538f201c0fadc9a8c0718b9abb68345b/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$APPLICATION_HOME_DIR$/.gradle/caches/modules-2/files-2.1/br.com.mauker.materialsearchview/materialsearchview/1.2.0/b7274d1addaba09723adf3dfee86581dac7abb03/materialsearchview-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

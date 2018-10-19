@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="huang.bling.hackathon">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,6 +21,9 @@
             </intent-filter>
         </activity>
         <service android:name=".ServiceViewImpl">
+            <intent-filter>
+                <action android:name="android.intent.action.SERVICE"/>
+            </intent-filter>
         </service>
     </application>
 

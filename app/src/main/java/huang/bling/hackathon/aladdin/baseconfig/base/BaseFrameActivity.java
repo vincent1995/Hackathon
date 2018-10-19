@@ -2,12 +2,12 @@ package huang.bling.hackathon.aladdin.baseconfig.base;
 
 import android.os.Bundle;
 
-import com.afollestad.materialdialogs.MaterialDialog;
-import com.sunlandgroup.aladdin.baseconfig.BaseMoudle;
-import com.sunlandgroup.aladdin.baseconfig.BasePresenter;
-import com.sunlandgroup.aladdin.baseconfig.BaseView;
-import com.sunlandgroup.aladdin.baseconfig.util.TUtil;
-import com.sunlandgroup.aladdin.util.SLog;
+import huang.bling.hackathon.aladdin.baseconfig.BaseMoudle;
+import huang.bling.hackathon.aladdin.baseconfig.BasePresenter;
+import huang.bling.hackathon.aladdin.baseconfig.BaseView;
+import huang.bling.hackathon.aladdin.baseconfig.util.TUtil;
+import huang.bling.hackathon.aladdin.util.SLog;
+
 
 /**
  * Created by 沈东 on 2016/11/9.
@@ -19,7 +19,7 @@ public abstract class BaseFrameActivity<P extends BasePresenter, M extends BaseM
 
     public M mModel;
 
-    private MaterialDialog mFailDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

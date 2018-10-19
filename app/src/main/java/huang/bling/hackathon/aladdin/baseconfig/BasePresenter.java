@@ -2,7 +2,8 @@ package huang.bling.hackathon.aladdin.baseconfig;
 
 import android.content.Context;
 
-import com.sunlandgroup.aladdin.baseconfig.rx.RxManager;
+import huang.bling.hackathon.aladdin.baseconfig.rx.RxManager;
+
 
 /**
  * Created by 沈东 on 2016/11/9.

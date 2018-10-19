@@ -2,6 +2,7 @@ package huang.bling.hackathon;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -20,6 +21,10 @@ private static int LOCREQUEST=1;
         setContentView(R.layout.activity_main);
         context=MyApplication.getContext();
         checkForPermission();
+
+        //start service
+        Intent myIntent=new Intent(this,ServiceViewImpl.class);
+        startService(myIntent);
 
     }
 

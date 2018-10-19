@@ -1,27 +1,54 @@
 package huang.bling.hackathon;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.Manifest;
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 
-import org.w3c.dom.Text;
+import huang.bling.hackathon.aladdin.MyApplication;
+import huang.bling.hackathon.aladdin.baseconfig.base.BaseActivity;
 
-import java.util.HashMap;
-
-
-public class MainActivity extends AppCompatActivity{
-
-    @Override
+public class MainActivity extends BaseActivity {
+private static Context context;
+private static int LOCREQUEST=1;
+@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent serviceIntent=new Intent();
-        serviceIntent.setAction("android.intent.action.SERVICE");
-        startService(serviceIntent);
+        context=MyApplication.getContext();
+        checkForPermission();
+
     }
+
+    private void checkForPermission() {
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},LOCREQUEST);
+        }
+    }
+//
+//    @Override
+//    public void updateMap(Object map) {
+//
+//    }
+//
+//    @Override
+//    public void setLocationTsunamiInfo(Object location, Object o) {
+//
+//    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults){
+if(requestCode==LOCREQUEST){
+    if(grantResults.length==1 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
+        System.out.println("应用权限获取成功");
+    }else{
+        System.out.println("应用权限获取失败");
+    }
+}
+}
 
 }

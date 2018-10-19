@@ -1,8 +1,9 @@
 package huang.bling.hackathon.aladdin.ui.homepage;
 
-import com.sunlandgroup.aladdin.baseconfig.BaseMoudle;
-import com.sunlandgroup.aladdin.baseconfig.BasePresenter;
-import com.sunlandgroup.aladdin.baseconfig.BaseView;
+
+import huang.bling.hackathon.aladdin.baseconfig.BaseMoudle;
+import huang.bling.hackathon.aladdin.baseconfig.BasePresenter;
+import huang.bling.hackathon.aladdin.baseconfig.BaseView;
 
 /**
  * Created by 沈东 on 2017/7/11.

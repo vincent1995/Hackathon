@@ -12,10 +12,6 @@ import org.w3c.dom.Text;
 
 import java.util.HashMap;
 
-import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -23,6 +19,9 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent serviceIntent=new Intent();
+        serviceIntent.setAction("android.intent.action.SERVICE");
+        startService(serviceIntent);
     }
 
 }

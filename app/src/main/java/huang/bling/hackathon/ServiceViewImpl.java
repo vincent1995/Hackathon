@@ -7,6 +7,7 @@ import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.IBinder;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
@@ -56,11 +57,18 @@ public class ServiceViewImpl<TsunamiInfo> extends Service implements AppContract
     public void setTsunamiInfo(Object o) {
         boolean alarm=false;
 
+        //data processing procedure
 
+        alarm=true;
+
+        //data processing procedure ends
 
         if(alarm==true){
             myManager=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
             Intent resultIntent=new Intent(this,MainActivity.class);
+            Bundle ack=new Bundle();
+            ack.putInt("alarm",1);
+            resultIntent.putExtras(ack);
             TaskStackBuilder stackBuilder=TaskStackBuilder.create(this);
             stackBuilder.addParentStack(MainActivity.class);
             stackBuilder.addNextIntent(resultIntent);

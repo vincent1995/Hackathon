@@ -1,7 +1,9 @@
 package huang.bling.hackathon;
 
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
+import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -58,10 +60,19 @@ public class ServiceViewImpl<TsunamiInfo> extends Service implements AppContract
 
         if(alarm==true){
             myManager=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+            Intent resultIntent=new Intent(this,MainActivity.class);
+            TaskStackBuilder stackBuilder=TaskStackBuilder.create(this);
+            stackBuilder.addParentStack(MainActivity.class);
+            stackBuilder.addNextIntent(resultIntent);
+            PendingIntent resultPendingIntent=
+                    stackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
+
             myBuilder=new NotificationCompat.Builder(this)
                     .setSmallIcon(R.drawable.ic_launcher_background)
                     .setContentTitle("Alarm!")
-                    .setContentText("A Tsunami is coming!");
+                    .setContentText("A Tsunami is coming!")
+                    .setPriority(2);
+            myBuilder.setContentIntent(resultPendingIntent);
             myManager.notify(notId,myBuilder.build());
 
             myVibrator=(Vibrator)getSystemService(Context.VIBRATOR_SERVICE);

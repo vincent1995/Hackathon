@@ -19,8 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".ServiceViewImpl">
-        </service>
+        <!--<service android:name=".ServiceViewImpl">-->
+        <!--</service>-->
     </application>
 
 </manifest>

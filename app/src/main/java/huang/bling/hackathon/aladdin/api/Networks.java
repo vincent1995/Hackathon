@@ -1,8 +1,5 @@
 package huang.bling.hackathon.aladdin.api;
 
-import com.sunlandgroup.aladdin.BuildConfig;
-import com.sunlandgroup.aladdin.global.Constants;
-import com.sunlandgroup.aladdin.util.SLog;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,6 +8,9 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.concurrent.TimeUnit;
 
+import huang.bling.hackathon.BuildConfig;
+import huang.bling.hackathon.aladdin.global.Constants;
+import huang.bling.hackathon.aladdin.util.SLog;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

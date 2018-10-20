@@ -15,18 +15,19 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyActbYHUD-IXTqQESGda_V7pcpQyPfZxfo"/>
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <service android:name=".ServiceViewImpl">
             <intent-filter>
                 <action android:name="android.intent.action.SERVICE"/>
             </intent-filter>
         </service>
+        <activity
+            android:name=".ui.homepage.HomePageActivity"
+            android:label="This is a Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

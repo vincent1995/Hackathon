@@ -2,13 +2,12 @@ package huang.bling.hackathon.aladdin.baseconfig.rx;
 
 import android.support.annotation.NonNull;
 
-import com.sunlandgroup.aladdin.util.SLog;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
+import huang.bling.hackathon.aladdin.util.SLog;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;

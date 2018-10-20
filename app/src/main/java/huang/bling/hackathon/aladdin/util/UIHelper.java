@@ -4,13 +4,9 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
-import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.widget.Toast;
-
-import com.amap.api.maps.model.LatLng;
-import com.amap.api.services.core.LatLonPoint;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -111,57 +107,57 @@ public class UIHelper {
      * @param location
      * @return
      */
-    public static LatLng changeAMapLocationToLatLng(String location) {
-        String[] result = location.split(",");
-        Double lng = Double.valueOf(result[0]);
-        Double lat = Double.valueOf(result[1]);
-        LatLng location1 = new LatLng(lat, lng);
-        return location1;
-    }
+//    public static LatLng changeAMapLocationToLatLng(String location) {
+//        String[] result = location.split(",");
+//        Double lng = Double.valueOf(result[0]);
+//        Double lat = Double.valueOf(result[1]);
+//        LatLng location1 = new LatLng(lat, lng);
+//        return location1;
+//    }
 
-    /**
-     * 将服务器获取过来的GPS的location转换为高德坐标的LatLng类
-     *
-     * @param location
-     * @return
-     */
-    public static LatLng changeServiceLocationToLatLng(String location) {
-        String[] result = location.split("\\s");
-        Double lng = Double.valueOf(result[0]);
-        Double lat = Double.valueOf(result[1]);
-        LatLng location1 = new LatLng(lat, lng);
-        return AMapUtil.transformFromWGSToGCJ(location1);
-    }
+//    /**
+//     * 将服务器获取过来的GPS的location转换为高德坐标的LatLng类
+//     *
+//     * @param location
+//     * @return
+//     */
+//    public static LatLng changeServiceLocationToLatLng(String location) {
+//        String[] result = location.split("\\s");
+//        Double lng = Double.valueOf(result[0]);
+//        Double lat = Double.valueOf(result[1]);
+//        LatLng location1 = new LatLng(lat, lng);
+//        return AMapUtil.transformFromWGSToGCJ(location1);
+//    }
+//
+//    /**
+//     * 将服务器获取过来的GPS的location转换为高德坐标的LatLng类
+//     *
+//     * @param location
+//     * @return
+//     */
+//    public static LatLng changeLocationToLatLng(String location) {
+//        String[] result = location.split(",");
+//        Double lng = Double.valueOf(result[0]);
+//        Double lat = Double.valueOf(result[1]);
+//        LatLng location1 = new LatLng(lat, lng);
+//        return AMapUtil.transformFromWGSToGCJ(location1);
+//    }
 
-    /**
-     * 将服务器获取过来的GPS的location转换为高德坐标的LatLng类
-     *
-     * @param location
-     * @return
-     */
-    public static LatLng changeLocationToLatLng(String location) {
-        String[] result = location.split(",");
-        Double lng = Double.valueOf(result[0]);
-        Double lat = Double.valueOf(result[1]);
-        LatLng location1 = new LatLng(lat, lng);
-        return AMapUtil.transformFromWGSToGCJ(location1);
-    }
-
-
-    /**
-     * 将服务器获取过来的GPS的location转换为高德坐标的LatLng类
-     *
-     * @param location
-     * @return
-     */
-    public static LatLonPoint changeLocationToLatLonPoint(String location) {
-        String[] result = location.split(",");
-        Double lng = Double.valueOf(result[0]);
-        Double lat = Double.valueOf(result[1]);
-        LatLng location1 = AMapUtil.transformFromWGSToGCJ(new LatLng(lat, lng));
-        LatLonPoint locationPoint = new LatLonPoint(location1.latitude, location1.longitude);
-        return locationPoint;
-    }
+//
+//    /**
+//     * 将服务器获取过来的GPS的location转换为高德坐标的LatLng类
+//     *
+//     * @param location
+//     * @return
+//     */
+//    public static LatLonPoint changeLocationToLatLonPoint(String location) {
+//        String[] result = location.split(",");
+//        Double lng = Double.valueOf(result[0]);
+//        Double lat = Double.valueOf(result[1]);
+//        LatLng location1 = AMapUtil.transformFromWGSToGCJ(new LatLng(lat, lng));
+//        LatLonPoint locationPoint = new LatLonPoint(location1.latitude, location1.longitude);
+//        return locationPoint;
+//    }
 
 
     /**
@@ -185,22 +181,22 @@ public class UIHelper {
         return appVersionName;
     }
 
-    /**
-     * 获得手机IMEI号
-     *
-     * @param context
-     * @return
-     */
-    public static String getImei(Context context) {
-        String imei = null;
-        try {
-            TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-            imei = telephonyManager.getDeviceId();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return imei;
-    }
+//    /**
+//     * 获得手机IMEI号
+//     *
+//     * @param context
+//     * @return
+//     */
+//    public static String getImei(Context context) {
+//        String imei = null;
+//        try {
+//            TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+//            imei = telephonyManager.getDeviceId();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return imei;
+//    }
 
     /**
      * 将中文字符强制转化为UTF-8编码

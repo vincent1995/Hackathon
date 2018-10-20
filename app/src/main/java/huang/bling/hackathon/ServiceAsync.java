@@ -4,8 +4,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 
-import huang.bling.hackathon.AppContract;
-
 public class ServiceAsync extends AsyncTask<ServiceViewImpl, Void, Void> {
     private AppContract.MapModule myMap;
     private AppContract.WeatherModule<Object, Object> myWeather;
@@ -14,8 +12,8 @@ public class ServiceAsync extends AsyncTask<ServiceViewImpl, Void, Void> {
     @Override
     protected Void doInBackground(ServiceViewImpl... serviceViews) {
         myView=(ServiceViewImpl) serviceViews[0];
-        Object[] myLocation={myMap.getCurrentLocation()};
-        myInfo=myWeather.getTsunamiInfo(myLocation);
+//        Object[] myLocation={myMap.getCurrentLocation()};
+//        myInfo=myWeather.getTsunamiInfo(myLocation);
         return null;
     }
     @Override

@@ -9,10 +9,17 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 import huang.bling.hackathon.aladdin.MyApplication;
 import huang.bling.hackathon.aladdin.baseconfig.base.BaseActivity;
+import huang.bling.hackathon.aladdin.util.SLog;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements OnMapReadyCallback {
 private static Context context;
 private static int LOCREQUEST=1;
 @Override
@@ -22,6 +29,9 @@ private static int LOCREQUEST=1;
         context=MyApplication.getContext();
         checkForPermission();
 
+    SupportMapFragment mapFragment =
+            (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+    mapFragment.getMapAsync(this);
         //start service
         Intent myIntent=new Intent(this,ServiceViewImpl.class);
         startService(myIntent);
@@ -56,4 +66,9 @@ if(requestCode==LOCREQUEST){
 }
 }
 
+    @Override
+    public void onMapReady(GoogleMap map) {
+        map.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        SLog.e("abc","asdad");
+    }
 }

@@ -16,14 +16,15 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.sunlandgroup.aladdin.global.Constants;
-import com.sunlandgroup.aladdin.util.AppManager;
-import com.sunlandgroup.aladdin.util.NetworkUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import huang.bling.hackathon.aladdin.global.Constants;
+import huang.bling.hackathon.aladdin.util.AppManager;
+import huang.bling.hackathon.aladdin.util.NetworkUtil;
 
 /**
  * Created by 沈东 on 2016/11/9.
